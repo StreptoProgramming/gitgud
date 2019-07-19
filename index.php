@@ -3,7 +3,8 @@
 
 	<head>
 		<title> Absensi_SMP_Assalaam </title>
-		
+ 		<meta charset="utf-8">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">		
 		<!-- CSS Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -12,20 +13,21 @@
 	</head>
 
 	<body>
+
 		<!-- Bagian Background -->
 		<section>
 			
 
 			<div class="login-box">
-				<h1>Login Here</h1>
-					<form>
-						<p> Email </p>
-						<input type="email" name="email" placeholder="Enter your Email">
+				<h1>Login Heres</h1>
+					<form method="post" action='loginasalam.php'>
+						<p>Username </p>
+						<div class="form-group">
+						<input type="text" name="username" placeholder="Enter your Email"></div>
 						<p> Password </p>
-						<input type="password" name="password" placeholder="Enter your Password">
-						<input type="submit" name="submit" value="Login">
-						<a href="#"></a>
-						<h4>Powered by <img src="css/images/Logo-Putih.png" alt="" height="36px;" width="90px" style="margin-left: 5px;"></h4>						
+						<div class="form-group"><input type="password" name="password" placeholder="Enter your Password"></div>
+						<button type="submit" name="submit" value="Login" class="btn btn-primary"> Submit </button>
+						<h4>Powered by <img src="./css/images/Logo-Putih.png" alt="" height="36px;" width="90px" style="margin-left: 5px;"></h4>						
 					</form>
 			</div>
 			
