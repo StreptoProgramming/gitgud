@@ -18,7 +18,7 @@
 		<section>
 			<div class="login-box">
 				<h1>Login Siswa </h1>
-					<form method="post" action='loginasalam.php'>
+					<form method="post" action='loginsiswa.php'>
 						<p> Username </p>
 						<div class="form-group">
 						<input type="text" name="username" placeholder="Enter your username"></div>

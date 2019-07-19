@@ -9,8 +9,8 @@ if (mysqli_num_rows($hasil)>0) {
 	session_start();
 	$_SESSION['username']=$username;
 	$_SESSION['status']='login';
-	header('location: ./admin/halamanrule.php');
+	header('location: ./dashboard/dashboard_admin.php');
 }else{
 	echo "Error: ".$sql . "<br>" . $conn->error;
-	header("location: ./view_loginadmin.php");
+	header("location: /.view_loginadmin.php");
 }
