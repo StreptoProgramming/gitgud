@@ -11,8 +11,72 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="../now-ui-kit.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+  <!-- Bootstraps CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="../css/dashboard.css">
+
+  <!-- Css Only for admin Dashboard -->
+
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
 </head>
-   <div class="py-3">
+
+<body>
+
+  <div class="wrapper">
+  
+    <!-- Sidebar Wrapper --> 
+
+    <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3> Sistem Manejemen Absensi</h3>
+                <h3> SMP Assalam </h3>
+            </div>
+
+            <ul class="list-unstyled component">
+                <p> Selamat Datang </p>
+                <li class="active">
+                    <a href="#"> Dashboard </a>
+                </li>
+                <li>
+                    <a href="#"> Lihat Kehadiran Siswa </a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> Rekap </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#"> Rekap Harian </a>
+                        </li>
+                        <li>
+                            <a href="#"> Rekap Bulanan </a>
+                        </li>
+                        <li>
+                            <a href="#"> Rekap Semester </a>
+                        </li>
+                        <li>
+                            <a href="#"> Rekap Nama </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <!-- Kolom download klw di contohnya mah -->
+
+    </nav>
+
+    <!-- Page Content On Wrapper / Holder -->
+    <div id="content">
+    
+    <div class="py-3">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -36,12 +100,12 @@
           	<br/>
             <table class="table table-bordered " id="myTable">
               <thead class="thead-primary">
-                <tr>
-                  <th class="table-primary align-items-center text-center justify-content-center" style="">ID Guru</th>
-                  <th class="table-primary align-items-center justify-content-center text-center">Password</th>
-                  <th class="table-primary align-items-center justify-content-center text-center">Nama</th>
-                  <th class="table-primary align-items-center justify-content-center text-center">Kelas</th>
-                  <th class="table-primary text-center justify-content-center align-items-center">Pilihan</th>
+                <tr class="bg-success">
+                  <th class="table-primary align-items-center text-center justify-content-center bg-success">ID Guru</th>
+                  <th class="table-primary align-items-center justify-content-center text-center bg-success">Password</th>
+                  <th class="table-primary align-items-center justify-content-center text-center bg-success">Nama</th>
+                  <th class="table-primary align-items-center justify-content-center text-center bg-success">Kelas</th>
+                  <th class="table-primary text-center justify-content-center align-items-center bg-success">Pilihan</th>
                 </tr>
               </thead>
               <tbody>
@@ -148,6 +212,20 @@
       </div>
     </div>
   </div>
+
+    <!-- End Content -->
+
+    </div>
+
+
+
+    
+
+    <!-- End Wrapper -->
+
+  </div>
+
+   
 <?php } ?>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
