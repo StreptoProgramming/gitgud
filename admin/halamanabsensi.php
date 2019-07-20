@@ -39,6 +39,7 @@
                   <th class="table-primary align-items-center text-center justify-content-center" style="">ID</th>
                   <th class="table-primary align-items-center justify-content-center text-center">Tanggal</th>
                   <th class="table-primary align-items-center justify-content-center text-center">Nama</th>
+                  <th class="table-primary align-items-center justify-content-center text-center">Kelas</th>
                   <th class="table-primary align-items-center justify-content-center text-center">Status</th>
                   <th class="table-primary text-center justify-content-center align-items-center">Pilihan</th>
                 </tr>
@@ -46,13 +47,14 @@
               <tbody>
                 <?php 
                   include '../configasalam.php';
-                  $data = mysqli_query($conn,"select * from absensi order by namasiswa DESC ");
+                  $data = mysqli_query($conn,"select * from absensi ");
                   while($d = mysqli_fetch_array($data)){
                 ?>
                 <tr>
                   <th class="align-items-center justify-content-center text-center"><?php echo $d['idabsensi'] ?></th>
                   <td class="justify-content-center align-items-center text-center"><?php echo $d['tanggal'] ?></td>
                   <td class="justify-content-center align-items-center text-center"><?php echo $d['namasiswa'] ?></td>
+                   <td class="justify-content-center align-items-center text-center"><?php echo $d['kelas'] ?></td>
                   <td class="justify-content-center align-items-center text-center"><?php echo $d['status'] ?></td>
                   <td class="justify-content-center align-items-center text-center">
                     <div class="btn-group"> 
@@ -83,6 +85,10 @@
             <label for="nama">Nama: </label>
             <input type="text" name="namasiswa" required="required" class="form-control bg-info" style="border:none">
           </div>
+          <div class="form-group">
+            <label for="nama">Kelas : </label>
+            <input type="text" name="kelas"  class="form-control bg-info" style="border:none">
+          </div>
 
           <div class="form-group">
             <label for="nama">Status : </label>
@@ -99,7 +105,7 @@
     <!-- Edit Data -->
   <?php 
     include '../configasalam.php';
-    $asolole = mysqli_query($conn,"select * from absensi SORT by idabsensi DESC");
+    $asolole = mysqli_query($conn,"select * from absensi");
     while($d = mysqli_fetch_array($asolole)){
   ?>
   <div id="ModalEditDataA<?php echo $d['idabsensi'];?>" class="modal fade" role="dialog">

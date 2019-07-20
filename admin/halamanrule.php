@@ -48,7 +48,7 @@
               <tbody>
                 <?php 
                   include '../configasalam.php';
-                  $data = mysqli_query($conn,"select * from rule order by idrule DESC ");
+                  $data = mysqli_query($conn,"select * from rule ");
                   while($d = mysqli_fetch_array($data)){
                 ?>
                 <tr>

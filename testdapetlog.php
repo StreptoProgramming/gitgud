@@ -24,11 +24,8 @@ if(isset($_POST['uid'])){
 					$wktmasuk=strtotime($r['waktumulaimasuk']);
 					$wktkeluar=strtotime($r['waktumulaikeluar']);
 					$timed=strtotime($waktu);
-					$wktkeluar1= DateTime::createFromFormat('H:i:s', $wktkeluar);
-					$wktmasuk1= DateTime::createFromFormat('H:i:s', $wktmasuk);
-					$timed1= DateTime::createFromFormat('H:i:s', $timed);
-					mysqli_query($conn,"insert into absensi(namasiswa,kelas,status) values ('$wktmasuk1','$wktkeluar1','$timed1')");
-					if ($timed1>$wktkeluar1 && $timed1<$wktkeluar1) {
+					mysqli_query($conn,"insert into absensi(namasiswa,kelas,status) values ('$wktmasuk','$wktkeluar','$timed')");
+					if ($timed>$wktmasuk && $timed<$wktkeluar) {
 						mysqli_query($conn,"insert into absensi(tanggal,namasiswa,kelas,status) values ('$tanggal','$namasiswa','$kelas','hadir')");
 					}else {
 						mysqli_query($conn,"insert into absensi(tanggal,namasiswa,kelas,status) values ('$tanggal','$namasiswa','$kelas','mokad')");
