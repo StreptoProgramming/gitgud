@@ -68,9 +68,9 @@
                 <div class="container-fluid">
                     <div class="row">
                         <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
+                        <div class="col-md-4 col-lg-3 col-xlg-4">
                             <div class="card card-hover">
-                                <div class="box bg-cyan text-center">
+                                <div class="box text-center">
                                     <a href="./dashboard_admin.php" class="btn btn-info btn-lag">
                                         <h1><i class="fa fa-th-list"></i></h1>
                                         <h6><span> Dashboard </span></h6>
@@ -82,9 +82,9 @@
                         </div>
 
                         <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
+                        <div class="col-md-4 col-lg-3 col-xlg-4">
                             <div class="card card-hover">
-                                <div class="box bg-danger text-center">
+                                <div class="box text-center">
                                     <a href="./tanggalrekap.php" class="btn btn-danger btn-lag text-white">
                                         <h1><i class="fa fa-archive"></i></h1>
                                         <h6><span> Rekap Absensi </span></h6>
@@ -95,11 +95,11 @@
 
                         </div>
                        <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
+                        <div class="col-md-4 col-lg-3 col-xlg-4">
                             <div class="card card-hover">
-                                <div class="box bg-danger text-center">
-                                    <a href="./halamanabsensi.php" class="btn btn-danger btn-lag text-white">
-                                        <h1><i class="fa fa-archive"></i></h1>
+                                <div class="box text-center">
+                                    <a href="./halamanabsensi.php" class="btn btn-warning btn-lag text-white">
+                                        <h1><i class="fa fa-clipboard"></i></h1>
                                         <h6><span> Jurnal Absensi </span></h6>
                                     </a>
 
@@ -109,37 +109,44 @@
                         </div>
 
                         <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
+                        <div class="col-md-4 col-lg-3 col-xlg-4">
                             <div class="card card-hover">
-                                <div class="box bg-warning text-center">
-                                    <a href="./halamanlog.php" class="btn btn-warning btn-lag text-white">
-                                        <h1><i class="fa fa-clipboard"></i></h1>
-                                        <h6><span> LOG RFID </span></h6>
+                                <div class="box text-center">
+                                    <a href="./halamanabsensi.php" class="btn btn-success btn-lag text-white">
+                                        <h1><i class="fa fa-address-card"></i></h1>
+                                        <h6><span> Log RFID </span></h6>
                                     </a>
 
                                 </div>
                             </div>
 
                         </div>
-                        <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
+
+
+
+                    </div>
+
+                    <!-- 2nd row -->
+                    <div class="row row2">
+                        
+                        <div class="col-md-4 col-lg-5 col-xlg-4">
                             <div class="card card-hover">
-                                <div class="box bg-warning text-center">
-                                    <a href="./halamankelas.php" class="btn btn-warning btn-lag text-white">
-                                        <h1><i class="fa fa-clipboard"></i></h1>
-                                        <h6><span> kelas</span></h6>
+                                <div class="box bg-danger text-center">
+                                    <a href="./halamanabsensi.php" class="btn btn-lag text-white" style="background: #673ab7;">
+                                        <h1><i class="fa fa-clock"></i></h1>
+                                        <h6><span>  Peraturan Jam </span></h6>
                                     </a>
 
                                 </div>
                             </div>
 
                         </div>
-                        <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
+
+                        <div class="col-md-4 col-lg-3 col-xlg-4">
                             <div class="card card-hover">
-                                <div class="box bg-warning text-center">
-                                    <a href="./halamanguru.php" class="btn btn-warning btn-lag text-white">
-                                        <h1><i class="fa fa-clipboard"></i></h1>
+                                <div class="box bg-danger text-center">
+                                    <a href="./halamanabsensi.php" class="btn btn-lag text-white" style="background: #795548;">
+                                        <h1><i class="fa fa-female"></i></h1>
                                         <h6><span> Guru </span></h6>
                                     </a>
 
@@ -147,13 +154,13 @@
                             </div>
 
                         </div>
-                        <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
+
+                        <div class="col-md-4 col-lg-3 col-xlg-4">
                             <div class="card card-hover">
-                                <div class="box bg-warning text-center">
-                                    <a href="./halamanrule.php" class="btn btn-warning btn-lag text-white">
-                                        <h1><i class="fa fa-clipboard"></i></h1>
-                                        <h6><span> Peraturan Jam </span></h6>
+                                <div class="box bg-danger text-center">
+                                    <a href="./halamanabsensi.php" class="btn  btn-lag text-white"style="background: #546e7a" >
+                                        <h1><i class="	fa fa-graduation-cap"></i></h1>
+                                        <h6><span> Kelas </span></h6>
                                     </a>
 
                                 </div>
