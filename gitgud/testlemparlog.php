@@ -1,4 +1,4 @@
-<form method="post" action="testdapetlog.php">
+<form method="post" action="log.php">
         <div class="modal-body">
           <div class="form-group">
             <label for="nama">UID: </label>

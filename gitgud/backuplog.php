@@ -24,10 +24,14 @@ if(isset($_POST['uid'])){
 					$wktmasuk=strtotime($r['waktumulaimasuk']);
 					$wktkeluar=strtotime($r['waktumulaikeluar']);
 					$timed=strtotime($waktu);
-					if ($timed>$wktmasuk && $timed<$wktkeluar) {
+					$wktkeluar1= DateTime::createFromFormat('H:i:s', $wktkeluar);
+					$wktmasuk1= DateTime::createFromFormat('H:i:s', $wktmasuk);
+					$timed1= DateTime::createFromFormat('H:i:s', $timed);
+					mysqli_query($conn,"insert into absensi(namasiswa,kelas,status) values ('$wktmasuk1','$wktkeluar1','$timed1')");
+					if ($timed1>$wktkeluar1 && $timed1<$wktkeluar1) {
 						mysqli_query($conn,"insert into absensi(tanggal,namasiswa,kelas,status) values ('$tanggal','$namasiswa','$kelas','hadir')");
 					}else {
-						mysqli_query($conn,"insert into absensi(tanggal,namasiswa,kelas,status) values ('$tanggal','$namasiswa','$kelas','terlambat')");
+						mysqli_query($conn,"insert into absensi(tanggal,namasiswa,kelas,status) values ('$tanggal','$namasiswa','$kelas','mokad')");
 
 				}
 
@@ -36,8 +40,8 @@ if(isset($_POST['uid'])){
 		}else{
 			$handlesalin=mysqli_query($conn, "select * from absensi where namasiswa='$namasiswa' and tanggal='$tanggal'and kelas='$kelas'");
 			if(mysqli_num_rows($handlesalin)<=0){
-				$waktosmasuk=strtotime("030000");
-				$waktoskeluar=strtotime("700000");
+				$waktosmasuk=strtotime("060000");
+				$waktoskeluar=strtotime("220000");
 				$waktos=strtotime($waktu);
 				if ($waktos>$waktosmasuk && $waktos<$waktoskeluar)
 				{
@@ -51,6 +55,6 @@ if(isset($_POST['uid'])){
 	}else{
 		mysqli_query($conn, "insert into log values('','','','$tanggal','$waktu','$uid') ");
 	}
-
+	echo "berhasil bung";
 }
 ?>
