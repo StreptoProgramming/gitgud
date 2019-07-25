@@ -13,6 +13,9 @@
         <a href="./tanggalrekap.php"> Rekap </a>
       </li>
       <li>
+          <a href="./tanggalrekaphari.php"> Rekap Kelas</a>
+      </li>
+      <li>
         <a href="./halamanabsensi.php"> Absensi </a>
       </li>
     </ul>

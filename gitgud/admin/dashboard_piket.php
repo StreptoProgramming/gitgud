@@ -1,3 +1,16 @@
+<?php 
+  session_start();
+  $level=$_SESSION['level'];
+  if($_SESSION['status']!="login"){
+    header("location:../index.php?pesan=belum_login");
+  }
+  if ($level=='piket') {
+
+  }else{
+    header('location: ../index.php');
+  }
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -41,6 +54,12 @@
                     <a href="./tanggalrekap.php"> Rekap Absensi </a>
                 </li>
                 <li>
+                    <a href="./halamanrekaphari.php"> Rekap Tanggal</a>
+                </li>
+                  <li>
+                    <a href="./tanggalrekaphari.php"> Rekap Kelas </a>
+                  </li>
+                <li>
                     <a href="./halamanabsensi.php"> Jurnal Absensi </a>
                 </li>
 
@@ -49,60 +68,15 @@
             <!-- Kolom download klw di contohnya mah -->
 
         </nav>
-
-        <!-- Page Content on Wrapper / Holder -->
-        <div id="content">
+                <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box bg-cyan text-center">
-                                    <a href="./dashboard_piket.php" class="btn btn-info btn-lag">
-                                        <h1><i class="fa fa-th-list"></i></h1>
-                                        <h6><span> Dashboard </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box bg-danger text-center">
-                                    <a href="./tanggalrekap.php" class="btn btn-danger btn-lag text-white">
-                                        <h1><i class="fa fa-archive"></i></h1>
-                                        <h6><span> Rekap Absensi </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box bg-warning text-center">
-                                    <a href="./halamanabsensi.php" class="btn btn-warning btn-lag text-white">
-                                        <h1><i class="fa fa-clipboard"></i></h1>
-                                        <h6><span> Jurnal Absensi </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
+                
+            
 
             </nav>
 
-        </div>
     </div>
+</div>
 
     <!-- Jquery  -->
 

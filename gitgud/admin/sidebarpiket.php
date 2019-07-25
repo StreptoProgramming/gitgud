@@ -13,6 +13,12 @@
         <a href="./tanggalrekap.php"> Rekap Absensi </a>
       </li>
       <li>
+          <a href="./halamanrekaphari.php"> Rekap Tanggal</a>
+      </li>
+        <li>
+          <a href="./tanggalrekaphari.php"> Rekap Kelas </a>
+        </li>
+      <li>
         <a href="./halamanabsensi.php"> Jurnal Absensi </a>
       </li>
     </ul>

@@ -1,3 +1,16 @@
+<?php 
+  session_start();
+  $level=$_SESSION['level'];
+  if($_SESSION['status']!="login"){
+    header("location:../index.php?pesan=belum_login");
+  }
+  if ($level=='siswa') {
+
+  }else{
+    header('location: ../index.php');
+  }
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -47,44 +60,12 @@
 
         </nav>
 
-        <!-- Page Content on Wrapper / Holder -->
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box bg-cyan text-center">
-                                    <a href="./dashboard_siswa.php" class="btn btn-info btn-lag">
-                                        <h1><i class="fa fa-th-list"></i></h1>
-                                        <h6><span> Dashboard </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Column -->
-                        <div class="col-md-7 col-lg-4 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box bg-dark text-center">
-                                    <a href="./tanggalrekap.php" class="btn btn-dark btn-lag text-white">
-                                        <h1><i class="fa fa-puzzle-piece"></i></h1>
-                                        <h6><span> Lihat Kehadiran Anda </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                
+            
 
             </nav>
-
-        </div>
     </div>
 
     <!-- Jquery  -->

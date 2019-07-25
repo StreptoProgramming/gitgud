@@ -1,3 +1,17 @@
+<?php 
+  session_start();
+  $level=$_SESSION['level'];
+  if($_SESSION['status']!="login"){
+    header("location:../index.php?pesan=belum_login");
+  }
+  if ($level=='admin') {
+
+  }else{
+    header('location: ../index.php');
+  }
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -42,6 +56,12 @@
         <a href="./tanggalrekap.php"> Rekap </a>
       </li>
       <li>
+        <a href="./halamanrekaphari.php"> Rekap Tanggal</a>
+      </li>
+      <li>
+        <a href="./tanggalrekaphari.php"> Rekap Kelas </a>
+      </li>
+      <li>
         <a href="./halamanabsensi.php"> Absensi </a>
       </li>
       <li>
@@ -63,120 +83,7 @@
   </nav>
 
         <!-- Page Content on Wrapper / Holder -->
-        <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!-- Column -->
-                        <div class="col-md-4 col-lg-3 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box text-center">
-                                    <a href="./dashboard_admin.php" class="btn btn-info btn-lag">
-                                        <h1><i class="fa fa-th-list"></i></h1>
-                                        <h6><span> Dashboard </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Column -->
-                        <div class="col-md-4 col-lg-3 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box text-center">
-                                    <a href="./tanggalrekap.php" class="btn btn-danger btn-lag text-white">
-                                        <h1><i class="fa fa-archive"></i></h1>
-                                        <h6><span> Rekap Absensi </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-                       <!-- Column -->
-                        <div class="col-md-4 col-lg-3 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box text-center">
-                                    <a href="./halamanabsensi.php" class="btn btn-warning btn-lag text-white">
-                                        <h1><i class="fa fa-clipboard"></i></h1>
-                                        <h6><span> Jurnal Absensi </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Column -->
-                        <div class="col-md-4 col-lg-3 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box text-center">
-                                    <a href="./halamanabsensi.php" class="btn btn-success btn-lag text-white">
-                                        <h1><i class="fa fa-address-card"></i></h1>
-                                        <h6><span> Log RFID </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
-
-                    <!-- 2nd row -->
-                    <div class="row row2">
-                        
-                        <div class="col-md-4 col-lg-5 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box bg-danger text-center">
-                                    <a href="./halamanabsensi.php" class="btn btn-lag text-white" style="background: #673ab7;">
-                                        <h1><i class="fa fa-clock"></i></h1>
-                                        <h6><span>  Peraturan Jam </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-4 col-lg-3 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box bg-danger text-center">
-                                    <a href="./halamanabsensi.php" class="btn btn-lag text-white" style="background: #795548;">
-                                        <h1><i class="fa fa-female"></i></h1>
-                                        <h6><span> Guru </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-4 col-lg-3 col-xlg-4">
-                            <div class="card card-hover">
-                                <div class="box bg-danger text-center">
-                                    <a href="./halamanabsensi.php" class="btn  btn-lag text-white"style="background: #546e7a" >
-                                        <h1><i class="	fa fa-graduation-cap"></i></h1>
-                                        <h6><span> Kelas </span></h6>
-                                    </a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </nav>
-
-        </div>
-
+    
     </div>
 
     <!-- Jquery  -->

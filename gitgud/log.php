@@ -56,5 +56,8 @@ if(isset($_POST['uid'])){
 		mysqli_query($conn, "insert into log values('','','','$tanggal','$waktu','$uid') ");
 	}
 
+	include './admin/vlog.php';
+	header("Refresh:0");
 }
 ?>
+
