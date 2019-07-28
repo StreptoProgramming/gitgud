@@ -92,6 +92,7 @@
                   <td class="justify-content-center align-items-center text-center">
                     <div class="btn-group">
                       <button class="btn btn-success shadow" data-target="#ModalEditDataA<?php echo $d['idrule']; ?>" data-toggle="modal" >Edit</button> 
+                      <button data-target="#ModalHapusDataA<?php echo $d['idrule']; ?>" data-toggle="modal" class="btn btn-danger shadow">Delete</button>
                     </div>
                   </td>
                 </tr>
@@ -190,6 +191,34 @@
           <input type="submit" class="btn btn-primary" value="Submit">
         </div>
         </form>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+ <!-- Hapus Data-->
+  <?php 
+    include '../configasalam.php';
+    $asol = mysqli_query($conn,"select * from rule");
+    while($d = mysqli_fetch_array($asol)){
+  ?>
+  <div id="ModalHapusDataA<?php echo $d['idrule']; ?>" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Delete Data</h4>
+            <button type="button" class="close" data-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" name="" value="">
+            <p>Yakin akan menghapus data ini?</p>
+          </div>
+          <div class="modal-footer">
+            <a href="tambahrule/hapusrule.php?idrule=<?php echo $d['idrule']; ?> ">
+            <button type="submit" class="btn btn-primary">Hapus</button></a>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

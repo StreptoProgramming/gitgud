@@ -93,6 +93,7 @@
                   <td class="justify-content-center align-items-center text-center">
                     <div class="btn-group">
                       <button class="btn btn-success shadow" data-target="#ModalEditDataA<?php echo $d['nomorindukwali']; ?>" data-toggle="modal" >Edit</button> 
+                      <button data-target="#ModalHapusDataA<?php echo $d['nomorindukwali']; ?>" data-toggle="modal" class="btn btn-danger shadow">Delete</button>
                     </div>
                   </td>
                 </tr>
@@ -213,6 +214,34 @@
   </div>
 
    
+<?php } ?>
+ <!-- Hapus Data-->
+  <?php 
+    include '../configasalam.php';
+    $asol = mysqli_query($conn,"select * from wali");
+    while($d = mysqli_fetch_array($asol)){
+  ?>
+  <div id="ModalHapusDataA<?php echo $d['nomorindukwali']; ?>" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Delete Data</h4>
+            <button type="button" class="close" data-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" name="" value="">
+            <p>Yakin akan menghapus data ini?</p>
+          </div>
+          <div class="modal-footer">
+            <a href="tambahguru/hapusguru.php?nomorindukwali=<?php echo $d['nomorindukwali']; ?> ">
+            <button type="submit" class="btn btn-primary">Hapus</button></a>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <?php } ?>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
