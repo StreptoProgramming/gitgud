@@ -4,6 +4,8 @@
   $level=$_SESSION['level'];
   $tglawal=$_POST['daritanggal'];
   $tglakhir=$_POST['sampaitanggal'];
+  $_SESSION['tgalawal']=$tglawal;
+  $_SESSION['tgalakhir']=$tglakhir;
   if($_SESSION['status']!="login"){
     header("location:../index.php?pesan=belum_login");
   }
@@ -65,8 +67,13 @@
       <div class="row">
         <div class="col-md-12">
           <div class="table-responsive">
-            <?php echo "Dari : ".$tglawal."  Sampai : ".$tglakhir ?>
             <table class="table table-bordered " id="myTable">
+
+            <a href="rekap/exportrekap.php"><button class="btn btn-primary shadow"><i class="fa fa-fw fa-plus"></i>Download Excel</button></a>
+            
+            <br/>
+            <?php echo "Dari : ".$tglawal."  Sampai : ".$tglakhir ?>
+            
               <thead class="thead-primary">
                 <tr class="bg-success">
                   <th class="table-primary align-items-center text-center justify-content-center bg-success">Nama</th>

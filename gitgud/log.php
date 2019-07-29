@@ -19,15 +19,15 @@ if(isset($_POST['uid'])){
 
 			}
 			else {
-				$handlesalin=mysqli_query($conn, "select * from absensi where namasiswa='$namasiswa' and tanggal='$tanggal'and kelas='$kelas'");
+				$handlesalin=mysqli_query($conn, "select * from absensi where namasiswa='$namasiswa' and tanggal='$tanggal'and kelas='$kelas' and status!='belumtap'");
 				if(mysqli_num_rows($handlesalin)<=0){
 					$wktmasuk=strtotime($r['waktumulaimasuk']);
 					$wktkeluar=strtotime($r['waktumulaikeluar']);
 					$timed=strtotime($waktu);
 					if ($timed>$wktmasuk && $timed<$wktkeluar) {
-						mysqli_query($conn,"insert into absensi(tanggal,namasiswa,kelas,status) values ('$tanggal','$namasiswa','$kelas','hadir')");
+						mysqli_query($conn,"update absensi set tanggal='$tanggal', status='hadir' where namasiswa='$namasiswa' and kelas='$kelas'");
 					}else {
-						mysqli_query($conn,"insert into absensi(tanggal,namasiswa,kelas,status) values ('$tanggal','$namasiswa','$kelas','terlambat')");
+						mysqli_query($conn,"update absensi set tanggal='$tanggal', status='terlambat' where namasiswa='$namasiswa' and kelas='$kelas'");
 
 				}
 
@@ -41,9 +41,9 @@ if(isset($_POST['uid'])){
 				$waktos=strtotime($waktu);
 				if ($waktos>$waktosmasuk && $waktos<$waktoskeluar)
 				{
-					mysqli_query($conn,"insert into absensi(tanggal,namasiswa,kelas,status) values ('$tanggal','$namasiswa','$kelas','hadir')");
+					mysqli_query($conn,"update absensi set tanggal='$tanggal', status='hadir' where namasiswa='$namasiswa' and kelas='$kelas'");
 				}else {
-					mysqli_query($conn,"insert into absensi(tanggal,namasiswa,kelas,status) values ('$tanggal','$namasiswa','$kelas','terlambat')");
+					mysqli_query($conn,"update absensi set tanggal='$tanggal', status='terlambat' where namasiswa='$namasiswa' and kelas='$kelas'");
 				}
 
 			}
